@@ -27,6 +27,7 @@ private void run(int numFriends, int numDead, int popSize) {
     population.add(new Person());
   }
   println("  Total Pop: " + population.size() * POP_SCALER);
+  println("  Simulated Pop: " + population.size());
   
   // Populate their social networks
   println("Initializing Social Networks ...");
@@ -46,6 +47,7 @@ private void run(int numFriends, int numDead, int popSize) {
     population.get(index).kill();
   }
   println("  Total Dead: " + numDead);
+  println("  Simulated Dead: " + numDead/POP_SCALER);
     
   // For each person, calculate how many deaths they see in their social network 
   // and add this figure to the deathHistogram
